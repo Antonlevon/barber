@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "tg-mini-app/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "tg-mini-app/dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/tg-mini-app/(.*)",
+      "dest": "/tg-mini-app/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0F0F11;
+  color: #F5F5F5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Telegram WebView specific styles */
+body {
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Glass effect */
+.glass-effect {
+  background: rgba(26, 26, 29, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Smooth animations */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd tg-mini-app && npm install && npm run build",
+  "outputDirectory": "tg-mini-app/dist",
+  "installCommand": "cd tg-mini-app && npm install",
+  "framework": null
+}
