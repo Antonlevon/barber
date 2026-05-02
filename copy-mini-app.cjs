@@ -31,4 +31,12 @@ if (!fs.existsSync(destDir)) {
 const srcDir = path.join(__dirname, 'tg-mini-app', 'dist');
 copyRecursiveSync(srcDir, destDir);
 
+// Copy screen1.jpg to dist/tg-mini-app/
+const imageSrc = path.join(__dirname, 'tg-mini-app', 'public', 'screen1.jpg');
+const imageDest = path.join(destDir, 'screen1.jpg');
+if (fs.existsSync(imageSrc)) {
+  fs.copyFileSync(imageSrc, imageDest);
+  console.log('✓ Background image copied');
+}
+
 console.log('✓ Telegram Mini App copied to dist/tg-mini-app/');
