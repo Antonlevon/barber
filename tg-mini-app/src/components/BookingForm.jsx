@@ -89,7 +89,7 @@ const BookingForm = () => {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background z-10" />
         <img
-          src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&q=80&w=1200"
+          src="/tg-mini-app/screen1.jpg"
           alt="Barbershop background"
           className="w-full h-full object-cover opacity-20"
         />
